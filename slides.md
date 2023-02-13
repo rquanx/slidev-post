@@ -27,27 +27,11 @@ css: unocss
 
 # 数字图像处理
 
-Presentation slides for developers
-
-<!-- <div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div> -->
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
 ---
 transition: fade-out
 ---
 
-# What is Slidev?
+# 什么是图像处理
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features
 
@@ -64,11 +48,6 @@ Slidev is a slides maker and presenter designed for developers, consist of the f
 
 Read more about [Why Slidev?](https://sli.dev/guide/why)
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
 <style>
 h1 {
   background-color: #2B90B6;
@@ -81,15 +60,11 @@ h1 {
 }
 </style>
 
-<!--
-Here is another comment.
--->
-
 ---
 transition: slide-up
 ---
 
-# Navigation
+# 图像处理能做什么
 
 Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
 
@@ -115,10 +90,10 @@ layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
-# Code
+# 数字图像的空域处理
 
 Use code snippets and get the highlighting directly![^1]
-
+<!-- |分割点击步骤，各个步骤分别高亮哪块代码 -->
 ```ts {all|2|1-6|9|all}
 interface User {
   id: number
@@ -133,9 +108,9 @@ function updateUser(id: number, update: User) {
   saveUser(id, newUser)
 }
 ```
-
+<!-- v-click="3"等于3后显示 -->
 <arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
+<!-- ^1 索引 -->
 [^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
 
 <style>
