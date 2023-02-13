@@ -31,22 +31,24 @@ css: unocss
 transition: fade-out
 ---
 
-# 什么是图像处理
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+# 什么是数字图像处理
 
 <br>
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+- **数字图像** - 定义为二维函数 f(x,y),在 (x,y) 处幅值 f 为图像在该点的灰度值的一幅图像
+- **数字图像处理** - 借助计算机进行数字图像的处理
+
+<br>
+<br>
+<div class="image-container h-60 flex items-center justify-around">
+<img
+  class="h-40"
+  src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763058661441676305865874.png"/>
+<img
+  class="h-40"
+  src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763058091501676305809134.png"/>
+</div>
 
 <style>
 h1 {
@@ -66,28 +68,45 @@ transition: slide-up
 
 # 图像处理能做什么
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+图像处理的常用应用领域
 
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+<img w-200 m-auto src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763071670911676307166619.png"/>
 
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+
+# 图像处理的技术层次
+
+<br/>
+<br/>
+<br/>
+<div grid="~ cols-2 gap-4" v-click-hide>
+
+- **图像处理** - 泛指各种图像技术，狭义指对图像进行各种加工以改善视觉效果，并为自动识别打基础。
+
+<br/>
+
+- **图像分析** -对图像中感兴趣的目标进行检测和测量，以获得它们的客观信息，从而建立对图像的描述。
+
+<br/>
+
+- **图像理解** - 进一步研究图像中各目标的性质和它们之间的联系，并得出对图像内容的理解及对原来客观场景的解释。
+
+<img class="first absolute right-0 w-100 top-20vh" src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763072050911676307204157.png" />
+</div>
+
+<img class="absolute w-150 top-12vh left-10vw" v-after src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763085080911676308508015.png"/>
+
+<style>
+ .slidev-vclick-target {
+  transition: all 500ms ease;
+}
+.first {
+  .slidev-vclick-hidden {
+    transition: all 500ms ease;
+  } 
+}
+</style>
+
 ---
 
 # 数字图像的空域处理
@@ -108,7 +127,7 @@ function updateUser(id: number, update: User) {
   saveUser(id, newUser)
 }
 ```
-<!-- v-click="3"等于3后显示 -->
+<!-- v-click="3"等于 3 后显示 -->
 <arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
 <!-- ^1 索引 -->
 [^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
