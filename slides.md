@@ -27,15 +27,9 @@ css: unocss
 
 # 数字图像处理
 
-谭润泉 x ChatGPT
-
 ---
 transition: fade-out
 ---
-
-# 资料索引
-
-
 
 # 什么是数字图像处理
 
@@ -43,18 +37,33 @@ transition: fade-out
 <br>
 
 - **数字图像** - 定义为二维函数 f(x,y),在 (x,y) 处幅值 f 为图像在该点的灰度值的一幅图像
+
+
 - **数字图像处理** - 借助计算机进行数字图像的处理
 
 <br>
 <br>
-<div class="image-container h-60 flex items-center justify-around">
-<img
-  class="h-40"
-  src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763058661441676305865874.png"/>
-<img
-  class="h-40"
-  src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763058091501676305809134.png"/>
-</div>
+<v-click at="1">
+  <div grid="~ cols-2 gap-10 first" v-click-hide>
+    <v-click at="1">
+      <div class="text-center">
+        <img class="h-35  m-b-5"
+          src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763966220911676396621305.png" />
+        真彩色图像
+      </div>
+    </v-click>
+    <v-click at="2">
+      <div class="text-center">
+        <img class="h-35 m-b-5"
+          src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763965540901676396553907.png" />
+        灰度图像
+      </div>
+    </v-click>
+
+  </div>
+</v-click>
+<img class="absolute left-35 bottom-10 h-60" v-after
+  src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763965250901676396524848.png" />
 
 <style>
 h1 {
@@ -65,6 +74,14 @@ h1 {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+ .slidev-vclick-target {
+  transition: all 500ms ease;
+}
+.first {
+  .slidev-vclick-hidden {
+    transition: all 500ms ease;
+  } 
 }
 </style>
 
@@ -145,7 +162,7 @@ transition: slide-up
 
 # 算术运算 - 加法
 
-$g(x,y) = a(x,y) + b(x,y)$
+$f(x,y) = a(x,y) + b(x,y)$
 ---
 ## 应用
 
