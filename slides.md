@@ -28,122 +28,19 @@ css: unocss
 # 数字图像处理
 
 ---
-transition: fade-out
+src: ./pages/什么是数字图像处理.md
 ---
 
-# 什么是数字图像处理
-
-<br>
-<br>
-
-- **数字图像** - 定义为二维函数 f(x,y),在 (x,y) 处幅值 f 为图像在该点的灰度值的一幅图像
-
-
-- **数字图像处理** - 借助计算机进行数字图像的处理
-
-<br>
-<br>
-<v-click at="1">
-  <div grid="~ cols-2 gap-10 first" v-click-hide>
-    <v-click at="1">
-      <div class="text-center">
-        <img class="h-35  m-b-5"
-          src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763966220911676396621305.png" />
-        真彩色图像
-      </div>
-    </v-click>
-    <v-click at="2">
-      <div class="text-center">
-        <img class="h-35 m-b-5"
-          src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763965540901676396553907.png" />
-        灰度图像
-      </div>
-    </v-click>
-
-  </div>
-</v-click>
-<img class="absolute left-35 bottom-10 h-60" v-after
-  src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763965250901676396524848.png" />
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
- .slidev-vclick-target {
-  transition: all 500ms ease;
-}
-.first {
-  .slidev-vclick-hidden {
-    transition: all 500ms ease;
-  } 
-}
-</style>
-
 ---
-transition: slide-up
+src: ./pages/图像处理能做什么.md
 ---
 
-# 图像处理能做什么
-
-图像处理的常用应用领域
-
-<img w-200 m-auto src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763071670911676307166619.png"/>
-
+---
+src: ./pages/图像处理的技术层次.md
 ---
 
-# 图像处理的技术层次
-
-<br/>
-<br/>
-<br/>
-<div grid="~ cols-2 gap-4" v-click-hide>
-
-- **图像处理** - 泛指各种图像技术，狭义指对图像进行各种加工以改善视觉效果，并为自动识别打基础。
-
-<br/>
-
-- **图像分析** -对图像中感兴趣的目标进行检测和测量，以获得它们的客观信息，从而建立对图像的描述。
-
-<br/>
-
-- **图像理解** - 进一步研究图像中各目标的性质和它们之间的联系，并得出对图像内容的理解及对原来客观场景的解释。
-
-<img class="first absolute right-0 w-100 top-20vh" src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763072050911676307204157.png" />
-</div>
-
-<img class="absolute w-150 top-12vh left-10vw" v-after src="https://fastly.jsdelivr.net/gh/rquanx/my-statics@master/images/16763085080911676308508015.png"/>
-
-<style>
- .slidev-vclick-target {
-  transition: all 500ms ease;
-}
-.first {
-  .slidev-vclick-hidden {
-    transition: all 500ms ease;
-  } 
-}
-</style>
-
 ---
-
-# 图像空域处理
-
-它基于图像中每个像素的数值进行操作。具体来说，空域处理使用图像中每个像素周围的像素值来计算新的像素值，以实现各种图像增强、滤波、锐化和模糊等操作。这种处理方法是最常用和最简单的图像处理方法之一。
-
-
-- 算术运算（代数运算）- 加、减、乘、除
-- 逻辑运算 - 与、或、非、异或
-- 几何变换 - 平移、缩放、剪切、旋转
-- 点运算（灰度变换）：线性、非线性、映射
-- 直方图变换 - 直方图均衡化、直方图规定化
-- 空域滤波 - 空域卷积
-
+src: ./pages/图像空域处理.md
 ---
 
 # 数学
