@@ -44,7 +44,7 @@ src: ./pages/图像空域处理.md
 ---
 
 ---
-src: ./pages/图像空域处理.md
+src: ./pages/算术运算/简述.md
 ---
 
 ---
