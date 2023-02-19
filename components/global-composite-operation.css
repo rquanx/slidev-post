@@ -1,0 +1,42 @@
+.container {
+  font-size: 8px;
+  text-align: center;
+}
+
+canvas {
+  width: 100px;
+  height: 100px;
+}
+
+.source {
+  display: flex;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+
+.left-container,
+.right-container {
+  position: relative;
+}
+
+.display {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.display canvas {
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+.glo canvas {
+  border: black 1px solid
+}
