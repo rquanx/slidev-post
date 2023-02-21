@@ -92,7 +92,11 @@ src: ./pages/逻辑运算/异或.md
 ---
 
 ---
-src: ./pages/逻辑运算/Canvas.md
+src: ./pages/逻辑运算/Canvas-1.md
+---
+
+---
+src: ./pages/逻辑运算/Canvas-2.md
 ---
 
 ---
