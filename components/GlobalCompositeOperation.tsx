@@ -20,6 +20,23 @@ const GlobalCompositeOperation = () => {
     })
   }
 
+  const drawScaleImage = (ctx: CanvasRenderingContext2D, image: HTMLImageElement, x: number, y: number, w: number, h: number, dx = x, dy = y) => {
+    const wRatio = image.width / w;
+    const hRatio = image.height / h;
+    const ratio = wRatio > hRatio ? wRatio : hRatio;
+    ctx.drawImage(image, x, y, w * ratio, h * ratio, dx, dy, w, h)
+  }
+
+  const drawRectOrImage = (ctx: CanvasRenderingContext2D, image: HTMLImageElement | undefined, color: string, x: number, y: number, w: number, h: number, dx = x, dy = y) => {
+    if (!image) {
+      ctx.fillStyle = color;
+      ctx.fillRect(dx, dy, w, h);
+    }
+    else {
+      drawScaleImage(ctx, image, x, y, w, h, dx, dy)
+    }
+  }
+
   const draw = async (left?: File, right?: File) => {
     const [leftImage, rightImage] = await Promise.all([loadImage(left), loadImage(right)])
     const [x, y, w, h] = [0, 0, 100, 100];
@@ -33,38 +50,16 @@ const GlobalCompositeOperation = () => {
     rightCanvas.height = 100;
     const leftCtx = leftCanvas.getContext('2d')!;
     const rightCtx = rightCanvas.getContext('2d')!;
-    if (!leftImage) {
-      leftCtx.fillStyle = leftColor;
-      leftCtx.fillRect(x, y, w, h);
-    }
-    else {
-      leftCtx.drawImage(leftImage, 0, 0)
-    }
-    if (!rightImage) {
-      rightCtx.fillStyle = rightColor
-      rightCtx.fillRect(x, y, w, h)
-    }
-    else {
-      leftCtx.drawImage(rightImage, 0, 0)
-    }
+    drawRectOrImage(leftCtx, leftImage, leftColor, x, y, w, h);
+    drawRectOrImage(rightCtx, rightImage, rightColor, x, y, w, h);
     values.forEach((v) => {
       const canvas = document.querySelector<HTMLCanvasElement>(`#${v}`)!;
       canvas.width = 150;
       canvas.height = 150;
       const ctx = canvas.getContext('2d')!;
-      if (!leftImage) {
-        ctx.fillStyle = leftColor;
-        ctx.fillRect(x, y, w, h);
-      } else {
-        leftCtx.drawImage(leftImage, 0, 0)
-      }
+      drawRectOrImage(ctx, leftImage, leftColor, x, y, w, h)
       ctx.globalCompositeOperation = v;
-      if (!rightImage) {
-        ctx.fillStyle = rightColor
-        ctx.fillRect(w / 2, h / 2, w, h)
-      } else {
-        leftCtx.drawImage(rightImage, 0, 0)
-      }
+      drawRectOrImage(ctx, rightImage, rightColor, x, y, w, h, w / 2, h / 2)
     })
   }
 
@@ -84,7 +79,11 @@ const GlobalCompositeOperation = () => {
         source-left
       </div>
       <div className="right-container">
-        <input type='file' id="right-input" />
+        <input type='file' id="right-input" onChange={(e) => {
+          // @ts-ignore
+          const file = e.target?.files?.[0] as File;
+          rightFile.value = file;
+        }} />
         <canvas id='right'></canvas>
         source-right
       </div>
