@@ -44,10 +44,10 @@ const GlobalCompositeOperation = () => {
     const rightColor = 'orange'
     const leftCanvas = document.querySelector<HTMLCanvasElement>('#left')!;
     const rightCanvas = document.querySelector<HTMLCanvasElement>('#right')!;
-    leftCanvas.width = 100;
-    leftCanvas.height = 100;
-    rightCanvas.width = 100;
-    rightCanvas.height = 100;
+    leftCanvas.width = w;
+    leftCanvas.height = h;
+    rightCanvas.width = w;
+    rightCanvas.height = h;
     const leftCtx = leftCanvas.getContext('2d')!;
     const rightCtx = rightCanvas.getContext('2d')!;
     drawRectOrImage(leftCtx, leftImage, leftColor, x, y, w, h);
