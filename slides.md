@@ -100,6 +100,14 @@ src: ./pages/逻辑运算/Canvas-2.md
 ---
 
 ---
+src: ./pages/几何变换/几何变换.md
+---
+
+---
+src: ./pages/几何变换/基本变换.md
+---
+
+---
 src: ./pages/几何变换/平移.md
 ---
 
