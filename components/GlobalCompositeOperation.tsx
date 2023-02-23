@@ -76,7 +76,7 @@ const GlobalCompositeOperation = () => {
           leftFile.value = file;
         }} />
         <canvas id="left"></canvas>
-        source-left
+        left
       </div>
       <div className="right-container">
         <input type='file' id="right-input" onChange={(e) => {
@@ -85,7 +85,7 @@ const GlobalCompositeOperation = () => {
           rightFile.value = file;
         }} />
         <canvas id='right'></canvas>
-        source-right
+        right
       </div>
       {
         values.map((v) => {
